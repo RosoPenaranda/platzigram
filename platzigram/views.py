@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from datetime import datetime
 
 def helloWorld(request):
-    return HttpResponse('<html><head><body><h1>Hello World!</h1></body></head></html>')
+    return HttpResponse('<html><head><body><h1>Hello World! {id}</h1></body></head></html>'.format(id=request.GET['id']))
 
 
 def time(request):

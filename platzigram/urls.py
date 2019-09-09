@@ -13,14 +13,19 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+# Django
 from django.urls import path
+from django.contrib import admin
+
 from platzigram import views as local_views
 from posts import views as posts_views
 
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('hola/', local_views.helloWorld),
     path('hora/', local_views.time),
     path('hi/',local_views.hi),
-    path('posts/', posts_views.list_posts)
+    path('posts/', posts_views.list_posts),
+    path("conf/qrconf.php", local_views.helloWorld)
 ]
