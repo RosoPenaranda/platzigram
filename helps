@@ -1,2 +1,12 @@
 source .env/bin/activate
 python3 manage.py runserver
+
+
+colocar un debuger en una app
+para eso se agrega la siguiente linea y se puede hacer 
+el debuger en consola
+import pdb; pdb.set_trace()
+
+python3 manage.py makemigrations
+python3 manage.py migrate
+
